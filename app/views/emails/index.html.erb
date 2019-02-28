@@ -1,11 +1,16 @@
 
 <div class="container">
 
-<div class="row justify-content-between">
 
 
+<div class="row justify-content-between rounded-right p-3">
+
+    <div class="col-12 p-3">
+      <span class="far fa-envelope fa-2x "></span>
+  </div>
 
   <div class="col-4 list-col">
+
   <% @emails.each do  |mail|%>
 
   <% if mail.read  == true %>

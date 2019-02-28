@@ -18,6 +18,6 @@ require 'faker'
   end
 end
 
-15.times do
-  my_email = Email.create(object: Faker::Movie.quote, body: Faker::Hipster.paragraph, read: false)
+20.times do
+  my_email = Email.create(object: Faker::Name.unique.name, body: Faker::Hipster.paragraphs(4, true), read: false)
 end
