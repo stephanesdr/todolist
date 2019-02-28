@@ -17,3 +17,7 @@ require 'faker'
     my_task.save
   end
 end
+
+15.times do
+  my_email = Email.create(object: Faker::Movie.quote, body: Faker::Hipster.paragraph, read: false)
+end

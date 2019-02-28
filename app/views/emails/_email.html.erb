@@ -1,0 +1,8 @@
+<div class="card p-3 h-100">
+
+    <h2 class="text-uppercase card-title"><%= email.object %></h2 >
+    <p class="body-email card-text"><%= email.body  %></p>
+
+    <a class="text-danger delete-email" href="<%=email_path(email.id)%>" data-confirm= 'Are you sure ?' data-method="DELETE", data-remote="true">delete</a>
+
+  </div>

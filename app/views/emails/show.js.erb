@@ -1,0 +1,16 @@
+
+$(document).ready(function() {
+  let old_body = $('.body-email').find('.card');
+  let new_body = $("<%= j render 'email', email: @email %>");
+  let list_item = $('#li-email<%= @email.id %>');
+
+  if (old_body.length === 1) {
+       $(old_body).remove();
+     }
+   $(new_body).appendTo('.body-email').hide().fadeIn(400);
+
+   <% if @email.read == true %>
+   $('#li-email<%= @email.id %>').css("color",  "grey");  // version JQUERY
+   <% end %>
+   
+});

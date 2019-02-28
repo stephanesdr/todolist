@@ -1,0 +1,33 @@
+
+<div class="container">
+
+<div class="row justify-content-between">
+
+
+
+  <div class="col-4 list-col">
+  <% @emails.each do  |mail|%>
+
+  <% if mail.read  == true %>
+  <div id="<%= mail.id %>">
+    <a class="text-primary" href="<%= email_path(mail.id)%>" data-remote="true">
+    <li id="li-email<%= mail.id %>" class="email-read"> <%= mail.object  %> </li>
+    </a>
+  </div>
+  <% else %>
+  <div id="<%= mail.id %>">
+    <a class="text-primary" href="<%= email_path(mail.id)%>" data-remote="true">
+    <li id="li-email<%= mail.id %>"> <%= mail.object  %> </li>
+    </a>
+  </div>
+  <% end %>
+  <% end %>
+  </div>
+
+  <div class="col-8 body-email">
+
+  </div>
+
+
+</div>
+</div>

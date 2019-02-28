@@ -5,3 +5,45 @@
 @import "font-awesome";
 @import "components/*";
 
+
+
+
+
+li:hover {
+  color: white;
+  background-color: #9a81ff;
+  /* border-radius: 4px; */
+  width: 100%;
+  padding-left: 5px;
+}
+
+.list-col {
+    border-left: 4px solid #4911b5;
+  }
+
+.email-read {
+  color: grey;
+}
+
+
+.text-primary {
+  list-style: none;
+  line-height: 2.4rem;
+  color: black;
+}
+
+.text-primary:hover {
+  text-decoration: none;
+}
+
+
+a.delete-email {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 10px;
+}
+
+.card.p-3.h-100 {
+  box-shadow: 5px 5px #4911b5;
+  border: 2px solid #9a81ff;
+}
