@@ -1,9 +1,8 @@
 <% if @task.status == true %>
-document.getElementById('task<%= @task.id %>').style.textDecoration = "line-through"
-console.log(document.getElementById('task<%= @task.id %>'));
+$('#task<%= @task.id %>').css("text-decoration",  "line-through");  // version JQUERY
 <% end %>
 
 <% if @task.status == false %>
-document.getElementById('task<%= @task.id %>').style.textDecoration = "none"
+document.getElementById('task<%= @task.id %>').style.textDecoration = "none"   // version JS
 console.log(document.getElementById('task<%= @task.id %>'));
 <% end %>
