@@ -1,0 +1,14 @@
+
+document.getElementById('<%= @category.id %>').querySelectorAll('ul')[0].insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+
+
+console.log($(".checkbox"));
+$(".checkbox").bind("change", function() {
+  var bool = this.checked ? true : false;
+  var regex = /task_/;
+  $.ajax({
+    url: "/tasks/" + this.id.replace(regex, ""),
+    type: "PUT",
+    data: { status: bool }
+  });
+});

@@ -1,0 +1,5 @@
+
+<li class="fresh-task">
+  <%= check_box_tag dom_id(task), nil, task.status, :class => 'checkbox', data: {remote: true, url: task_path(task.id), method: 'PUT' }%>
+
+<%= task.title %>, to read: <%= task.deadline.strftime('%D') %></li>

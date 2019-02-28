@@ -1,0 +1,9 @@
+<% if @task.status == true %>
+document.getElementById('task<%= @task.id %>').style.textDecoration = "line-through"
+console.log(document.getElementById('task<%= @task.id %>'));
+<% end %>
+
+<% if @task.status == false %>
+document.getElementById('task<%= @task.id %>').style.textDecoration = "none"
+console.log(document.getElementById('task<%= @task.id %>'));
+<% end %>
