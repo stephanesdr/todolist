@@ -1,5 +1,10 @@
 
-<li class="fresh-task">
-  <%= check_box_tag dom_id(task), nil, task.status, :class => 'checkbox', data: {remote: true, url: task_path(task.id), method: 'PUT' }%>
 
-<%= task.title %>, to read: <%= task.deadline.strftime('%D') %></li>
+
+  <li id="task<%= task.id %>" class="todo-list d-flex justify-content-between ">
+  <%= check_box_tag dom_id(task), nil, task.status, :class => 'checkbox', data: {remote: true, url: task_path(task.id), method: 'PUT' }%>
+  <%= task.title  %>, to read: <%= task.deadline.strftime('%D')  %>
+  <span>
+    <a class="text-danger" href="<%=task_path(task.id)%>" data-confirm= 'Are you sure ?' data-method="DELETE", data-remote="true">delete</a>
+  </span>
+</li>

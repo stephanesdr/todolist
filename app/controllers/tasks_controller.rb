@@ -12,7 +12,7 @@ before_action :authenticate_user!
 
       respond_to do |format|
         format.html { redirect_to root_path }
-        format.js
+        format.js   
       flash[:notice] = "Task created"
       end
     else
