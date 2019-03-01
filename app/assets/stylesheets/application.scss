@@ -10,6 +10,13 @@ body {
       background-color: #f3f3f3;
 }
 
+li {
+  list-style-type: none;
+}
+
+li.show {
+  list-style: none;
+}
 
 li:hover {
   color: white;
@@ -18,9 +25,30 @@ li:hover {
   padding-left: 5px;
 }
 
+
+li.todo-list:hover {
+  background-color: transparent;
+  color: #9a81ff;
+  padding-left: 0px;
+
+}
 .list-col {
     border-left: 4px solid #4911b5;
   }
+
+ul.my-list-tasks {
+  border-left: 4px solid #4911b5;
+  color: #0e014e;
+
+}
+
+ul.d-flex.justify-content-between.flex-column.p-5 {
+    border-top: 4px solid #4911b5;
+    background-color: white;
+    color: #21045a;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
 
 .email-read {
   color: grey;
@@ -49,4 +77,29 @@ a.delete-email {
 .card.p-3.h-100 {
   box-shadow: 5px 5px #4911b5;
   border: 2px solid #9a81ff;
+}
+
+
+input#title {
+    box-shadow: 5px 5px #4911b5;
+    border: 2px solid #9a81ff;
+}
+
+input#deadline {
+    box-shadow: 5px 5px #4911b5;
+    border: 2px solid #9a81ff;
+}
+
+select#Category {
+    box-shadow: 5px 5px #4911b5;
+    border: 2px solid #9a81ff;
+}
+
+input#task-event {
+    border: 1px solid #4911b5;
+    color: #0e014e;
+}
+
+.form-label {
+  color: #21045a !important;
 }

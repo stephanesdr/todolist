@@ -1,16 +1,17 @@
 
 
 
-<h1 class="text-center mb-4">Welcome to my todolist app</h1>
 <%= render 'layouts/task_form'  %>
-<div class="container">
-  <ul>
+<div class="container mb-5">
+  <ul class="my-list-tasks">
   <% @categories.each do  |category|%>
   <li class="show"><%= category.title  %></li>
-  <div class="card appear" id="<%= category.id %>">
-    <ul>
+  <div class="appear" id="<%= category.id %>">
+    <ul class="d-flex justify-content-between flex-column p-5 mb-4">
       <% category.tasks.each do |task|  %>
-      <li id="task<%= task.id %>">
+
+
+        <li id="task<%= task.id %>" class="todo-list d-flex justify-content-between ">
         <%= check_box_tag dom_id(task), nil, task.status, :class => 'checkbox', data: {remote: true, url: task_path(task.id), method: 'PUT' }%>
         <%= task.title  %>
         <% unless task.deadline.nil? %>
@@ -18,17 +19,19 @@
         <% end %>
         <span>
           <a class="text-danger" href="<%=task_path(task.id)%>" data-confirm= 'Are you sure ?' data-method="DELETE", data-remote="true">delete</a>
-
         </span>
       </li>
+
+
       <% end %>
+
     </ul>
   </div>
   <% end %>
   </ul>
 </div>
 
-<div class="container">
+<div class="container my-4">
   <div class="row">
     <% @tasks.each do |task|  %>
       <div class="card col-3">
