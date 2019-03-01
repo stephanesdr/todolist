@@ -9,8 +9,8 @@ $(document).ready(function() {
      }
    $(new_body).appendTo('.body-email').hide().fadeIn(400);
 
-   <% if @email.read == true %>
+   <%if @email.read == true %>
    $('#li-email<%= @email.id %>').css("color",  "grey");  // version JQUERY
-   <% end %>
+   <%end%>
 
 });

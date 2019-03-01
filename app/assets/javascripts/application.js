@@ -22,6 +22,13 @@ $(document).ready(() => {
         $(this).next().toggle('slow');
       });
 
+var body = $("html, body");
+
+
+      $(document).ajaxComplete(function() {
+        body.stop().animate({scrollTop:0}, 500, 'swing', function() {
+        });
+      });
     // console.log($(".checkbox"));
     // $(".checkbox").bind("change", function() {
     //   var bool = this.checked ? true : false;

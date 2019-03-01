@@ -32,6 +32,19 @@ li.todo-list:hover {
   padding-left: 0px;
 
 }
+
+a.color-link {
+  color : #4911b5 !important;
+  font-weight: 400;
+}
+a.color-link-light {
+  color : #4911b5 !important;
+  font-weight: 200;
+}
+
+.shared-links > a {
+  color: #8d5ab7 !important;
+}
 .list-col {
     border-left: 4px solid #4911b5;
   }

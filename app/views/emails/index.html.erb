@@ -15,7 +15,7 @@
 
   <% if mail.read  == true %>
   <div id="<%= mail.id %>">
-    <a class="text-primary" href="<%= email_path(mail.id)%>" data-remote="true">
+    <a class="text-primary" href="<%= email_path(mail.id)%>" data-remote="true" onclick="topFunction()">
     <li id="li-email<%= mail.id %>" class="email-read"> <%= mail.object  %> </li>
     </a>
   </div>
